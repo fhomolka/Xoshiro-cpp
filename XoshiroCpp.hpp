@@ -35,6 +35,8 @@
 # else
 #	define XOSHIROCPP_NODISCARD_CXX20
 # endif
+# include <cstddef> //fhomolka: GCC complains if this is missing
+
 
 namespace XoshiroCpp
 {
