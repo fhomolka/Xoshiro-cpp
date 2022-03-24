@@ -72,7 +72,7 @@ namespace XoshiroCpp
 
 		constexpr result_type operator()() noexcept;
 
-		template <size_t N>
+		template <std::size_t N>
 		[[nodiscard]]
 		constexpr std::array<std::uint64_t, N> generateSeedSequence() noexcept;
 
@@ -691,7 +691,7 @@ namespace XoshiroCpp
 		return z ^ (z >> 31);
 	}
 
-	template <size_t N>
+	template <std::size_t N>
 	inline constexpr std::array<std::uint64_t, N> SplitMix64::generateSeedSequence() noexcept
 	{
 		std::array<std::uint64_t, N> seeds = {};
